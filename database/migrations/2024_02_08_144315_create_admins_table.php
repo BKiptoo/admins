@@ -13,14 +13,10 @@ return new class extends Migration
     {
         Schema::create('admins', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('username');
             $table->string('email')->unique();
-            $table->string('username')->nullable()->unique();
-            $table->string('phoneNumber');
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
+            $table->timestamps(); // This will create created_at and updated_at columns
         });
     }
 

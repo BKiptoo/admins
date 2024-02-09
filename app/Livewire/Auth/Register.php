@@ -26,6 +26,7 @@ class Register extends Component
     public function register()
     {
         $this->validate();
+//        dd('2023');
 
         User::create([
             'name' => $this->name,
@@ -36,7 +37,7 @@ class Register extends Component
         ]);
 
         // Optionally, you might want to redirect the user after registration
-        return redirect()->to('/'); // Redirect to the homepage
+        return redirect()->to('user.home'); // Redirect to the homepage
     }
 
     public function render()

@@ -1,12 +1,16 @@
 <?php
 
+use App\Livewire\Admin\AdminHome;
 use App\Livewire\Auth\Forgot;
 use App\Livewire\Auth\Login;
 use App\Livewire\Auth\Register;
 use App\Livewire\Auth\Reset;
 use App\Livewire\Auth\Verify;
+use App\Livewire\User\UserHome;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Auth\Admin\Login as AdminLogin;
+use App\Livewire\Auth\Admin\Forgot as AdminForgot;
+use App\Livewire\Auth\Admin\Reset as AdminReset;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,8 +35,22 @@ Route::get('register', Register::class)->name('register');
 Route::get('reset/{token}', Reset::class)->name('reset');
 Route::get('verify/{slug}', Verify::class)->name('verify');
 
+Route::group([
+    'middleware' => ['auth']
+], function () {
+    Route::get('home', UserHome::class)->name('home');
+});
+
+
 // Admin Routes
 Route::prefix('admin')->group(function () {
     // Authentication Routes
     Route::get('login', AdminLogin::class)->name('admin.login');
+    Route::get('forgot', AdminForgot::class)->name('admin.forgot');
+    Route::get('reset/{token}', AdminReset::class)->name('admin.reset');
+});
+Route::group([
+    'middleware' => ['auth']
+], function () {
+    Route::get('home', AdminHome::class)->name('admin.home');
 });
