@@ -6,7 +6,7 @@
 
                     <div class="d-flex justify-content-center py-4">
                         <a href="index.html" class="logo d-flex align-items-center w-auto">
-                            <img src="{{asset('assets/logos/logo.png')}}" alt="">
+                            <img src="{{asset('assets/logos/logos.jpg')}}" alt="">
                             <span class="d-none d-lg-block">mayministries.org</span>
                         </a>
                     </div><!-- End Logo -->

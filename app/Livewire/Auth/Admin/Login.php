@@ -26,7 +26,7 @@ class Login extends Component
         // If admin found and password matches, log them in
         if ($admin && password_verify($this->password, $admin->password)) {
             //            dd('2023');
-            return redirect()->route('admin-home');
+            return redirect()->route('admin.home');
         } else {
             $this->error = true;
             $this->password = '';
