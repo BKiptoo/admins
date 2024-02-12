@@ -3,7 +3,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
         <li class="nav-item">
-            <a class="nav-link " href="{{route('home')}}">
+            <a class="nav-link " href="{{route('user.home')}}">
                 <i class="bi bi-grid"></i>
                 <span>Dashboard</span>
             </a>

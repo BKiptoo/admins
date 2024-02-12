@@ -8,7 +8,7 @@
                 <img src="{{ asset('assets/img/not-found.svg') }}" class="img-fluid py-5" alt="Page Not Found">
                 <p>We are performing regular maintenance. The site will be back shortly.</p>
                 <br>
-                <a href="{{ route('home') }}" class="btn">Help Center</a>
+                <a href="{{ route('user.home') }}" class="btn">Help Center</a>
                 <br>
                 <div class="credits">
                     Designed by <a href="https://mayministries.org/">mayministries.org</a>

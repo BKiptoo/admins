@@ -19,12 +19,12 @@ class Login extends Component
     {
         // If the user is already authenticated, redirect them to the home page
         if (Auth::check()) {
-            return redirect()->to('home');
+            return redirect()->to('user.home');
         }
 
         if (Auth::attempt(['username' => $this->username, 'password' => $this->password])) {
             // Authentication successful
-            return redirect()->to('home');
+            return redirect()->to('user.home');
         }
 
         $this->addError('username', 'Invalid username or password.');

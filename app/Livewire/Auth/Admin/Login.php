@@ -19,12 +19,12 @@ class Login extends Component
     {
         // If the user is already authenticated, redirect them to the home page
         if (Auth::check()) {
-            return redirect()->to('admin-home');
+            return redirect()->to('admin.home');
         }
 
         if (Auth::attempt(['username' => $this->username, 'password' => $this->password])) {
             // Authentication successful
-            return redirect()->to('admin-home');
+            return redirect()->to('admin.home');
         }
 
         $this->addError('username', 'Invalid username or password.');
@@ -35,10 +35,10 @@ class Login extends Component
             // Check if the authenticated user is an admin
             if (Auth::user()->isAdmin()) {
                 // Authentication successful for admin user
-                return redirect()->to('admin-home');
+                return redirect()->to('admin.home');
             } else {
                 // Authentication successful for regular user
-                return redirect()->to('admin-home');
+                return redirect()->to('admin.home');
             }
         }
 

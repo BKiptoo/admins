@@ -39,7 +39,7 @@ Route::middleware(['guest'])->group(function () {
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('home', UserHome::class)->name('home');
+    Route::get('user.home', UserHome::class)->name('user.home');
 });
 
 Route::group([
@@ -58,7 +58,7 @@ Route::prefix('admin')->group(function () {
     });
 
     Route::middleware(['auth:admin'])->group(function () {
-        Route::get('home', AdminHome::class)->name('admin.home');
+        Route::get('admin.home', AdminHome::class)->name('admin.home');
     });
 });
 

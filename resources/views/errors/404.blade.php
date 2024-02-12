@@ -8,7 +8,7 @@
 {{--                <h2>The page you are looking for doesn't exist.</h2>--}}
                 <img src="{{asset('assets/img/5555.png')}}" class="img-fluid py-5" alt="Page Not Found">
 
-                <a class="btn" href="{{route('home')}}">Back to home</a>
+                <a class="btn" href="{{route('user.home')}}">Back to home</a>
 <br>
                 <div class="credits">
                     Designed by <a href="https://mayministries.org/">mayministries.org</a>
