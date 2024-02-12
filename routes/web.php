@@ -61,3 +61,4 @@ Route::prefix('admin')->group(function () {
         Route::get('home', AdminHome::class)->name('admin.home');
     });
 });
+
