@@ -32,12 +32,6 @@
 
 </head>
 <body class="error-page err-404">
-{{--<div class='loader'>--}}
-{{--    <div class='spinner-grow text-primary' role='status'>--}}
-{{--        <span class='sr-only'>Loading...</span>--}}
-{{--    </div>--}}
-{{--</div>--}}
-
 @yield('content')
 
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

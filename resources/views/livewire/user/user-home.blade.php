@@ -17,9 +17,44 @@
             <div class="col-lg-8">
                 <div class="row">
 
-                    <!-- Sales Card -->
+                    <!-- Attendance Card -->
                     <div class="col-xxl-4 col-md-6">
-                        <div class="card info-card sales-card">
+                        <div class="card info-card attendance-card">
+
+                            <div class="filter">
+                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                    <li class="dropdown-header text-start">
+                                        <h6>Filter</h6>
+                                    </li>
+
+                                    <li><a class="dropdown-item" href="#">Today</a></li>
+                                    <li><a class="dropdown-item" href="#">This Week</a></li>
+                                    <li><a class="dropdown-item" href="#">This Month</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Attendance <span>| Today</span></h5>
+
+                                <div class="d-flex align-items-center">
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-person"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6>85</h6>
+                                        <span class="text-success small pt-1 fw-bold">10%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div><!-- End Attendance Card -->
+
+
+                    <!-- Donation Card -->
+                    <div class="col-xxl-4 col-md-6">
+                        <div class="card info-card donation-card">
 
                             <div class="filter">
                                 <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
@@ -35,62 +70,27 @@
                             </div>
 
                             <div class="card-body">
-                                <h5 class="card-title">Sales <span>| Today</span></h5>
+                                <h5 class="card-title">Donations <span>| This Month</span></h5>
 
                                 <div class="d-flex align-items-center">
                                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                        <i class="bi bi-cart"></i>
+                                        <i class="bi bi-hand-holding-heart"></i>
                                     </div>
                                     <div class="ps-3">
-                                        <h6>145</h6>
-                                        <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
-
+                                        <h6>$1,500</h6>
+                                        <span class="text-success small pt-1 fw-bold">15%</span> <span class="text-muted small pt-2 ps-1">increase</span>
                                     </div>
                                 </div>
                             </div>
 
                         </div>
-                    </div><!-- End Sales Card -->
+                    </div><!-- End Donation Card -->
 
-                    <!-- Revenue Card -->
-                    <div class="col-xxl-4 col-md-6">
-                        <div class="card info-card revenue-card">
 
-                            <div class="filter">
-                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                    <li class="dropdown-header text-start">
-                                        <h6>Filter</h6>
-                                    </li>
-
-                                    <li><a class="dropdown-item" href="#">Today</a></li>
-                                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="card-body">
-                                <h5 class="card-title">Revenue <span>| This Month</span></h5>
-
-                                <div class="d-flex align-items-center">
-                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                        <i class="bi bi-currency-dollar"></i>
-                                    </div>
-                                    <div class="ps-3">
-                                        <h6>$3,264</h6>
-                                        <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div><!-- End Revenue Card -->
-
-                    <!-- Customers Card -->
+                    <!-- Congregation Card -->
                     <div class="col-xxl-4 col-xl-12">
 
-                        <div class="card info-card customers-card">
+                        <div class="card info-card congregation-card">
 
                             <div class="filter">
                                 <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
@@ -106,25 +106,25 @@
                             </div>
 
                             <div class="card-body">
-                                <h5 class="card-title">Customers <span>| This Year</span></h5>
+                                <h5 class="card-title">Congregation <span>| This Year</span></h5>
 
                                 <div class="d-flex align-items-center">
                                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                                         <i class="bi bi-people"></i>
                                     </div>
                                     <div class="ps-3">
-                                        <h6>1244</h6>
-                                        <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>
-
+                                        <h6>800</h6>
+                                        <span class="text-danger small pt-1 fw-bold">10%</span> <span class="text-muted small pt-2 ps-1">decrease</span>
                                     </div>
                                 </div>
-
                             </div>
+
                         </div>
 
-                    </div><!-- End Customers Card -->
+                    </div><!-- End Congregation Card -->
 
-                    <!-- Reports -->
+
+                    <!-- Weekly Attendance -->
                     <div class="col-12">
                         <div class="card">
 
@@ -136,29 +136,26 @@
                                     </li>
 
                                     <li><a class="dropdown-item" href="#">Today</a></li>
+                                    <li><a class="dropdown-item" href="#">This Week</a></li>
                                     <li><a class="dropdown-item" href="#">This Month</a></li>
-                                    <li><a class="dropdown-item" href="#">This Year</a></li>
                                 </ul>
                             </div>
 
                             <div class="card-body">
-                                <h5 class="card-title">Reports <span>/Today</span></h5>
+                                <h5 class="card-title">Weekly Attendance <span>| This Week</span></h5>
 
                                 <!-- Line Chart -->
-                                <div id="reportsChart"></div>
+                                <div id="attendanceChart"></div>
 
                                 <script>
                                     document.addEventListener("DOMContentLoaded", () => {
-                                        new ApexCharts(document.querySelector("#reportsChart"), {
+                                        new ApexCharts(document.querySelector("#attendanceChart"), {
                                             series: [{
-                                                name: 'Sales',
-                                                data: [31, 40, 28, 51, 42, 82, 56],
+                                                name: 'Sabbath Service',
+                                                data: [80, 85, 90, 85, 88, 92, 95],
                                             }, {
-                                                name: 'Revenue',
-                                                data: [11, 32, 45, 32, 34, 52, 41]
-                                            }, {
-                                                name: 'Customers',
-                                                data: [15, 11, 32, 18, 9, 24, 11]
+                                                name: 'Online Service',
+                                                data: [30, 35, 40, 38, 42, 45, 50]
                                             }],
                                             chart: {
                                                 height: 350,
@@ -170,7 +167,7 @@
                                             markers: {
                                                 size: 4
                                             },
-                                            colors: ['#4154f1', '#2eca6a', '#ff771d'],
+                                            colors: ['#4154f1', '#2eca6a'],
                                             fill: {
                                                 type: "gradient",
                                                 gradient: {
@@ -189,11 +186,11 @@
                                             },
                                             xaxis: {
                                                 type: 'datetime',
-                                                categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+                                                categories: ["2024-02-10T00:00:00.000Z", "2024-02-11T00:00:00.000Z", "2024-02-12T00:00:00.000Z", "2024-02-13T00:00:00.000Z", "2024-02-14T00:00:00.000Z", "2024-02-15T00:00:00.000Z", "2024-02-16T00:00:00.000Z"]
                                             },
                                             tooltip: {
                                                 x: {
-                                                    format: 'dd/MM/yy HH:mm'
+                                                    format: 'dd/MM/yy'
                                                 },
                                             }
                                         }).render();
@@ -204,11 +201,12 @@
                             </div>
 
                         </div>
-                    </div><!-- End Reports -->
+                    </div><!-- End Weekly Attendance -->
 
-                    <!-- Recent Sales -->
+
+                    <!-- Recent Donations -->
                     <div class="col-12">
-                        <div class="card recent-sales overflow-auto">
+                        <div class="card recent-donations overflow-auto">
 
                             <div class="filter">
                                 <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
@@ -224,53 +222,53 @@
                             </div>
 
                             <div class="card-body">
-                                <h5 class="card-title">Recent Sales <span>| Today</span></h5>
+                                <h5 class="card-title">Offerings <span>| Today</span></h5>
 
                                 <table class="table table-borderless datatable">
                                     <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Customer</th>
-                                        <th scope="col">Product</th>
-                                        <th scope="col">Price</th>
+                                        <th scope="col">Donor</th>
+                                        <th scope="col">Amount</th>
+                                        <th scope="col">Method</th>
                                         <th scope="col">Status</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
                                         <th scope="row"><a href="#">#2457</a></th>
-                                        <td>Brandon Jacob</td>
-                                        <td><a href="#" class="text-primary">At praesentium minu</a></td>
-                                        <td>$64</td>
-                                        <td><span class="badge bg-success">Approved</span></td>
+                                        <td>John Doe</td>
+                                        <td>$100</td>
+                                        <td>Credit Card</td>
+                                        <td><span class="badge bg-success">Received</span></td>
                                     </tr>
                                     <tr>
                                         <th scope="row"><a href="#">#2147</a></th>
-                                        <td>Bridie Kessler</td>
-                                        <td><a href="#" class="text-primary">Blanditiis dolor omnis similique</a></td>
-                                        <td>$47</td>
-                                        <td><span class="badge bg-warning">Pending</span></td>
+                                        <td>Jane Smith</td>
+                                        <td>$50</td>
+                                        <td>Bank Transfer</td>
+                                        <td><span class="badge bg-success">Received</span></td>
                                     </tr>
                                     <tr>
                                         <th scope="row"><a href="#">#2049</a></th>
-                                        <td>Ashleigh Langosh</td>
-                                        <td><a href="#" class="text-primary">At recusandae consectetur</a></td>
-                                        <td>$147</td>
-                                        <td><span class="badge bg-success">Approved</span></td>
+                                        <td>Michael Johnson</td>
+                                        <td>$200</td>
+                                        <td>Cash</td>
+                                        <td><span class="badge bg-warning">Pending</span></td>
                                     </tr>
                                     <tr>
                                         <th scope="row"><a href="#">#2644</a></th>
-                                        <td>Angus Grady</td>
-                                        <td><a href="#" class="text-primar">Ut voluptatem id earum et</a></td>
-                                        <td>$67</td>
-                                        <td><span class="badge bg-danger">Rejected</span></td>
+                                        <td>Sarah Brown</td>
+                                        <td>$75</td>
+                                        <td>Online Payment</td>
+                                        <td><span class="badge bg-success">Received</span></td>
                                     </tr>
                                     <tr>
                                         <th scope="row"><a href="#">#2644</a></th>
-                                        <td>Raheem Lehner</td>
-                                        <td><a href="#" class="text-primary">Sunt similique distinctio</a></td>
-                                        <td>$165</td>
-                                        <td><span class="badge bg-success">Approved</span></td>
+                                        <td>David Wilson</td>
+                                        <td>$150</td>
+                                        <td>Check</td>
+                                        <td><span class="badge bg-warning">Pending</span></td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -278,11 +276,12 @@
                             </div>
 
                         </div>
-                    </div><!-- End Recent Sales -->
+                    </div><!-- End Recent Donations -->
 
-                    <!-- Top Selling -->
+
+                    <!-- Top Sermons -->
                     <div class="col-12">
-                        <div class="card top-selling overflow-auto">
+                        <div class="card top-sermons overflow-auto">
 
                             <div class="filter">
                                 <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
@@ -292,59 +291,53 @@
                                     </li>
 
                                     <li><a class="dropdown-item" href="#">Today</a></li>
+                                    <li><a class="dropdown-item" href="#">This Week</a></li>
                                     <li><a class="dropdown-item" href="#">This Month</a></li>
-                                    <li><a class="dropdown-item" href="#">This Year</a></li>
                                 </ul>
                             </div>
 
                             <div class="card-body pb-0">
-                                <h5 class="card-title">Top Selling <span>| Today</span></h5>
+                                <h5 class="card-title">Top Sermons <span>| Today</span></h5>
 
                                 <table class="table table-borderless">
                                     <thead>
                                     <tr>
-                                        <th scope="col">Preview</th>
-                                        <th scope="col">Product</th>
-                                        <th scope="col">Price</th>
-                                        <th scope="col">Sold</th>
-                                        <th scope="col">Revenue</th>
+                                        <th scope="col">Title</th>
+                                        <th scope="col">Speaker</th>
+                                        <th scope="col">Views</th>
+                                        <th scope="col">Likes</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <th scope="row"><a href="#"><img src="assets/img/product-1.jpg" alt=""></a></th>
-                                        <td><a href="#" class="text-primary fw-bold">Ut inventore ipsa voluptas nulla</a></td>
-                                        <td>$64</td>
-                                        <td class="fw-bold">124</td>
-                                        <td>$5,828</td>
+                                        <th scope="row"><a href="#" class="text-primary fw-bold">The Power of Prayer</a></th>
+                                        <td>Pastor John Doe</td>
+                                        <td class="fw-bold">500</td>
+                                        <td class="fw-bold">200</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row"><a href="#"><img src="assets/img/product-2.jpg" alt=""></a></th>
-                                        <td><a href="#" class="text-primary fw-bold">Exercitationem similique doloremque</a></td>
-                                        <td>$46</td>
-                                        <td class="fw-bold">98</td>
-                                        <td>$4,508</td>
+                                        <th scope="row"><a href="#" class="text-primary fw-bold">Finding Strength in God</a></th>
+                                        <td>Pastor Jane Smith</td>
+                                        <td class="fw-bold">400</td>
+                                        <td class="fw-bold">180</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row"><a href="#"><img src="assets/img/product-3.jpg" alt=""></a></th>
-                                        <td><a href="#" class="text-primary fw-bold">Doloribus nisi exercitationem</a></td>
-                                        <td>$59</td>
-                                        <td class="fw-bold">74</td>
-                                        <td>$4,366</td>
+                                        <th scope="row"><a href="#" class="text-primary fw-bold">Living a Purposeful Life</a></th>
+                                        <td>Pastor Michael Johnson</td>
+                                        <td class="fw-bold">350</td>
+                                        <td class="fw-bold">150</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row"><a href="#"><img src="assets/img/product-4.jpg" alt=""></a></th>
-                                        <td><a href="#" class="text-primary fw-bold">Officiis quaerat sint rerum error</a></td>
-                                        <td>$32</td>
-                                        <td class="fw-bold">63</td>
-                                        <td>$2,016</td>
+                                        <th scope="row"><a href="#" class="text-primary fw-bold">Overcoming Challenges</a></th>
+                                        <td>Pastor Sarah Brown</td>
+                                        <td class="fw-bold">300</td>
+                                        <td class="fw-bold">130</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row"><a href="#"><img src="assets/img/product-5.jpg" alt=""></a></th>
-                                        <td><a href="#" class="text-primary fw-bold">Sit unde debitis delectus repellendus</a></td>
-                                        <td>$79</td>
-                                        <td class="fw-bold">41</td>
-                                        <td>$3,239</td>
+                                        <th scope="row"><a href="#" class="text-primary fw-bold">The Love of God</a></th>
+                                        <td>Pastor David Wilson</td>
+                                        <td class="fw-bold">280</td>
+                                        <td class="fw-bold">120</td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -352,7 +345,8 @@
                             </div>
 
                         </div>
-                    </div><!-- End Top Selling -->
+                    </div><!-- End Top Sermons -->
+
 
                 </div>
             </div><!-- End Left side columns -->
@@ -360,7 +354,7 @@
             <!-- Right side columns -->
             <div class="col-lg-4">
 
-                <!-- Recent Activity -->
+                <!-- Recent Events -->
                 <div class="card">
                     <div class="filter">
                         <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
@@ -370,70 +364,71 @@
                             </li>
 
                             <li><a class="dropdown-item" href="#">Today</a></li>
+                            <li><a class="dropdown-item" href="#">This Week</a></li>
                             <li><a class="dropdown-item" href="#">This Month</a></li>
-                            <li><a class="dropdown-item" href="#">This Year</a></li>
                         </ul>
                     </div>
 
                     <div class="card-body">
-                        <h5 class="card-title">Recent Activity <span>| Today</span></h5>
+                        <h5 class="card-title">Recent Events <span>| Today</span></h5>
 
                         <div class="activity">
 
                             <div class="activity-item d-flex">
-                                <div class="activite-label">32 min</div>
+                                <div class="activity-label">32 min</div>
                                 <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i>
                                 <div class="activity-content">
-                                    Quia quae rerum <a href="#" class="fw-bold text-dark">explicabo officiis</a> beatae
+                                    Conducted Prayer Session <a href="#" class="fw-bold text-dark">in the Chapel</a>
                                 </div>
                             </div><!-- End activity item-->
 
                             <div class="activity-item d-flex">
-                                <div class="activite-label">56 min</div>
+                                <div class="activity-label">56 min</div>
                                 <i class='bi bi-circle-fill activity-badge text-danger align-self-start'></i>
                                 <div class="activity-content">
-                                    Voluptatem blanditiis blanditiis eveniet
+                                    Organized Community Outreach Program
                                 </div>
                             </div><!-- End activity item-->
 
                             <div class="activity-item d-flex">
-                                <div class="activite-label">2 hrs</div>
+                                <div class="activity-label">2 hrs</div>
                                 <i class='bi bi-circle-fill activity-badge text-primary align-self-start'></i>
                                 <div class="activity-content">
-                                    Voluptates corrupti molestias voluptatem
+                                    Conducted Bible Study Session <a href="#" class="fw-bold text-dark">in the Fellowship Hall</a>
                                 </div>
                             </div><!-- End activity item-->
 
                             <div class="activity-item d-flex">
-                                <div class="activite-label">1 day</div>
+                                <div class="activity-label">1 day</div>
                                 <i class='bi bi-circle-fill activity-badge text-info align-self-start'></i>
                                 <div class="activity-content">
-                                    Tempore autem saepe <a href="#" class="fw-bold text-dark">occaecati voluptatem</a> tempore
+                                    Hosted Youth Group Meeting
                                 </div>
                             </div><!-- End activity item-->
 
                             <div class="activity-item d-flex">
-                                <div class="activite-label">2 days</div>
+                                <div class="activity-label">2 days</div>
                                 <i class='bi bi-circle-fill activity-badge text-warning align-self-start'></i>
                                 <div class="activity-content">
-                                    Est sit eum reiciendis exercitationem
+                                    Organized Church Cleanup Day
                                 </div>
                             </div><!-- End activity item-->
 
                             <div class="activity-item d-flex">
-                                <div class="activite-label">4 weeks</div>
+                                <div class="activity-label">4 weeks</div>
                                 <i class='bi bi-circle-fill activity-badge text-muted align-self-start'></i>
                                 <div class="activity-content">
-                                    Dicta dolorem harum nulla eius. Ut quidem quidem sit quas
+                                    Conducted Special Seminar on <a href="#" class="fw-bold text-dark">Family Values</a>
                                 </div>
                             </div><!-- End activity item-->
 
                         </div>
 
                     </div>
-                </div><!-- End Recent Activity -->
+                </div><!-- End Recent Events -->
 
-                <!-- Budget Report -->
+
+                <!-- Finance Overview -->
                 <div class="card">
                     <div class="filter">
                         <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
@@ -449,40 +444,40 @@
                     </div>
 
                     <div class="card-body pb-0">
-                        <h5 class="card-title">Budget Report <span>| This Month</span></h5>
+                        <h5 class="card-title">Finance Overview <span>| This Month</span></h5>
 
-                        <div id="budgetChart" style="min-height: 400px;" class="echart"></div>
+                        <div id="financeChart" style="min-height: 400px;" class="echart"></div>
 
                         <script>
                             document.addEventListener("DOMContentLoaded", () => {
-                                var budgetChart = echarts.init(document.querySelector("#budgetChart")).setOption({
+                                var financeChart = echarts.init(document.querySelector("#financeChart")).setOption({
                                     legend: {
                                         data: ['Allocated Budget', 'Actual Spending']
                                     },
                                     radar: {
                                         // shape: 'circle',
                                         indicator: [{
-                                            name: 'Sales',
+                                            name: 'Donations',
                                             max: 6500
                                         },
                                             {
-                                                name: 'Administration',
+                                                name: 'Expenses',
                                                 max: 16000
                                             },
                                             {
-                                                name: 'Information Technology',
+                                                name: 'Maintenance',
                                                 max: 30000
                                             },
                                             {
-                                                name: 'Customer Support',
+                                                name: 'Outreach Programs',
                                                 max: 38000
                                             },
                                             {
-                                                name: 'Development',
+                                                name: 'Staff Salaries',
                                                 max: 52000
                                             },
                                             {
-                                                name: 'Marketing',
+                                                name: 'Facility Upkeep',
                                                 max: 25000
                                             }
                                         ]
@@ -505,7 +500,8 @@
                         </script>
 
                     </div>
-                </div><!-- End Budget Report -->
+                </div><!-- End Finance Overview -->
+
 
                 <!-- Website Traffic -->
                 <div class="card">
@@ -585,7 +581,7 @@
                     </div>
                 </div><!-- End Website Traffic -->
 
-                <!-- News & Updates Traffic -->
+                <!-- Church Announcements -->
                 <div class="card">
                     <div class="filter">
                         <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
@@ -595,49 +591,50 @@
                             </li>
 
                             <li><a class="dropdown-item" href="#">Today</a></li>
+                            <li><a class="dropdown-item" href="#">This Week</a></li>
                             <li><a class="dropdown-item" href="#">This Month</a></li>
-                            <li><a class="dropdown-item" href="#">This Year</a></li>
                         </ul>
                     </div>
 
                     <div class="card-body pb-0">
-                        <h5 class="card-title">News &amp; Updates <span>| Today</span></h5>
+                        <h5 class="card-title">Church Announcements <span>| Today</span></h5>
 
                         <div class="news">
                             <div class="post-item clearfix">
                                 <img src="assets/img/news-1.jpg" alt="">
-                                <h4><a href="#">Nihil blanditiis at in nihil autem</a></h4>
-                                <p>Sit recusandae non aspernatur laboriosam. Quia enim eligendi sed ut harum...</p>
+                                <h4><a href="#">New Community Outreach Program</a></h4>
+                                <p>Join us as we launch our new community outreach program aimed at helping those in need...</p>
                             </div>
 
                             <div class="post-item clearfix">
                                 <img src="assets/img/news-2.jpg" alt="">
-                                <h4><a href="#">Quidem autem et impedit</a></h4>
-                                <p>Illo nemo neque maiores vitae officiis cum eum turos elan dries werona nande...</p>
+                                <h4><a href="#">Upcoming Church Picnic</a></h4>
+                                <p>Get ready for a fun-filled day at our annual church picnic! Bring your family and friends...</p>
                             </div>
 
                             <div class="post-item clearfix">
                                 <img src="assets/img/news-3.jpg" alt="">
-                                <h4><a href="#">Id quia et et ut maxime similique occaecati ut</a></h4>
-                                <p>Fugiat voluptas vero eaque accusantium eos. Consequuntur sed ipsam et totam...</p>
+                                <h4><a href="#">Youth Group Retreat</a></h4>
+                                <p>All youth members are invited to join us for a weekend retreat filled with spiritual growth...</p>
                             </div>
 
                             <div class="post-item clearfix">
                                 <img src="assets/img/news-4.jpg" alt="">
-                                <h4><a href="#">Laborum corporis quo dara net para</a></h4>
-                                <p>Qui enim quia optio. Eligendi aut asperiores enim repellendusvel rerum cuder...</p>
+                                <h4><a href="#">Volunteer Opportunities</a></h4>
+                                <p>We're looking for volunteers to assist with various church activities. If you're interested...</p>
                             </div>
 
                             <div class="post-item clearfix">
                                 <img src="assets/img/news-5.jpg" alt="">
-                                <h4><a href="#">Et dolores corrupti quae illo quod dolor</a></h4>
-                                <p>Odit ut eveniet modi reiciendis. Atque cupiditate libero beatae dignissimos eius...</p>
+                                <h4><a href="#">Bible Study Sessions</a></h4>
+                                <p>Join us every Wednesday evening for insightful Bible study sessions led by Pastor John...</p>
                             </div>
 
-                        </div><!-- End sidebar recent posts-->
+                        </div><!-- End church announcements-->
 
                     </div>
-                </div><!-- End News & Updates -->
+                </div><!-- End Church Announcements -->
+
 
             </div><!-- End Right side columns -->
 

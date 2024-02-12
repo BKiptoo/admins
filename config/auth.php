@@ -40,6 +40,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
     ],
 
     'api' => [
@@ -52,6 +56,8 @@ return [
         'driver' => 'session', // or 'token' if you prefer
         'provider' => 'admins', // This refers to the admin user provider defined below
     ],
+
+
 
     /*
     |--------------------------------------------------------------------------
@@ -92,6 +98,7 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\Admin::class,
         ],
+
     ],
 
     /*

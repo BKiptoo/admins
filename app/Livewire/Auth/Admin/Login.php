@@ -2,40 +2,47 @@
 
 namespace App\Livewire\Auth\Admin;
 
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
-use App\Models\Admin; // Import the Admin model
 
 class Login extends Component
 {
     public $username;
     public $password;
-    public $error = false; // Add a variable to track error status
 
+    protected $rules = [
+        'username' => 'required|string',
+        'password' => 'required|string',
+    ];
 
     public function login()
     {
-        // Validate the input fields
-        $this->validate([
-            'username' => 'required',
-            'password' => 'required',
-        ]);
-
-        // Attempt to find the admin by username
-        $admin = Admin::where('username', $this->username)->first();
-
-        // If admin found and password matches, log them in
-        if ($admin && password_verify($this->password, $admin->password)) {
-            //            dd('2023');
-            return redirect()->route('admin.home');
-        } else {
-            $this->error = true;
-            $this->password = '';
-            session()->flash('error', 'Invalid username or password.');
+        // If the user is already authenticated, redirect them to the appropriate home page
+        if (Auth::check()) {
+            if (Auth::admin()->isAdmin()) {
+                return redirect()->to('admin.home');
+            } else {
+                return redirect()->to('home');
+            }
         }
+
+        // Attempt to authenticate the user
+        if (Auth::attempt(['username' => $this->username, 'password' => $this->password])) {
+            // Check if the authenticated user is an admin
+            if (Auth::user()->isAdmin()) {
+                // Authentication successful for admin user
+                return redirect()->to('admin.home');
+            } else {
+                // Authentication successful for regular user
+                return redirect()->to('home');
+            }
+        }
+
+        $this->addError('username', 'Invalid username or password.');
     }
 
     public function render()
     {
-        return view('livewire.auth.admin.login')->layout('components.layouts.auth');
+        return view('livewire.auth.login')->layout('components.layouts.auth');
     }
 }

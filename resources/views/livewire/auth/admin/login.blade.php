@@ -43,12 +43,11 @@
                                             <label class="form-check-label" for="rememberMe">Remember me</label>
                                         </div>
                                     </div>
-
-                                    <button type="submit" class="btn btn-primary m-b-xs" wire:loading.class="disabled"
-                                            wire:offline.attr="disabled"><span wire:target="loginUser"
-                                                                               wire:loading.class="spinner-border spinner-border-lg"></span>
-                                        Sign In
-                                    </button>
+                                    <div class="col-12">
+                                        <form wire:submit.prevent="login">
+                                            <button class="btn btn-primary w-100" type="submit">Login</button>
+                                        </form>
+                                    </div>
 
                                     <div class="col-12">
 {{--                                        <p class="small mb-0">Don't have an account? <a href="{{ route('register') }}">Create an account</a></p>--}}
