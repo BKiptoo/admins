@@ -23,7 +23,7 @@
                                 </div>
 
                                 <div class="col-12">
-                                    <a href="{{ route('login') }}" class="btn btn-secondary">Instead Login</a>
+                                    <a href="{{ route('admin.login') }}" class="btn btn-secondary">Instead Login</a>
                                 </div>
                             </form>
                         </div>

@@ -18,7 +18,7 @@
                                     <p class="text-center small">Enter your username & password to login</p>
                                 </div>
 
-                                @if ($error)
+                                @if ($errors->any())
                                     <div class="alert alert-danger" role="alert">
                                         Incorrect username or password.
                                     </div>
@@ -44,13 +44,10 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <form wire:submit.prevent="login">
-                                            <button class="btn btn-primary w-100" type="submit">Login</button>
-                                        </form>
+                                        <button class="btn btn-primary w-100" type="submit">Login</button>
                                     </div>
 
                                     <div class="col-12">
-{{--                                        <p class="small mb-0">Don't have an account? <a href="{{ route('register') }}">Create an account</a></p>--}}
                                         <p class="small mb-0"><a href="{{ route('admin.forgot') }}">Forgot your password?</a></p>
                                     </div>
                                 </form>

@@ -9,7 +9,7 @@ use App\Livewire\Auth\Verify;
 use App\Livewire\User\Account\UserProfile;
 use App\Livewire\User\UserHome;
 use Illuminate\Support\Facades\Route;
-use App\Livewire\Auth\Admin\Login as AdminLogin;
+use App\Livewire\Auth\Admin\AdminLogin as AdminLogin;
 use App\Livewire\Auth\Admin\Forgot as AdminForgot;
 use App\Livewire\Auth\Admin\Reset as AdminReset;
 
@@ -50,15 +50,11 @@ Route::group([
 });
 // Admin Routes
 Route::prefix('admin')->group(function () {
-    // Authentication Routes
-    Route::middleware(['guest:admin'])->group(function () {
-        Route::get('login', AdminLogin::class)->name('admin.login');
-        Route::get('forgot', AdminForgot::class)->name('admin.forgot');
-        Route::get('reset/{token}', AdminReset::class)->name('admin.reset');
-    });
+    Route::get('login', AdminLogin::class)->name('admin.login');
+    Route::get('forgot', AdminForgot::class)->name('admin.forgot');
+    Route::get('reset/{token}', AdminReset::class)->name('admin.reset');
 
-    Route::middleware(['auth:admin'])->group(function () {
-        Route::get('admin.home', AdminHome::class)->name('admin.home');
-    });
+    Route::get('home', AdminHome::class)->name('admin.home');
 });
+
 
