@@ -10,14 +10,25 @@ use Illuminate\Support\Facades\Hash;
 class Admin extends Model
 {
     use HasFactory;
+/**
+ * stop autoincrement
+ */
 
+public $incrementing= 'false';
+/*
+ *
+ *
+ *
+ * */
+
+    protected $keyType = 'string';
     protected $fillable = [
         'username',
         'password',
     ];
 
     /**
-     * Set the admin's password.
+     * Set the admins password.
      *
      * @param  string  $value
      * @return void

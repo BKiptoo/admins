@@ -44,7 +44,9 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <button class="btn btn-primary w-100" type="submit">Login</button>
+                                        <form wire:submit.prevent="login">
+                                            <button class="btn btn-primary w-100" type="submit">Login</button>
+                                        </form>
                                     </div>
 
                                     <div class="col-12">

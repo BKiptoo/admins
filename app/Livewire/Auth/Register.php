@@ -9,6 +9,7 @@ class Register extends Component
 {
     public $name;
     public $email;
+    public $role;
     public $username;
     public $phoneNumber; // Add the phoneNumber property
     public $password;
@@ -17,6 +18,7 @@ class Register extends Component
     protected $rules = [
         'name' => 'required',
         'email' => 'required|email|unique:users,email',
+        'role'=>'required',
         'username' => 'required|unique:users,username',
         'phoneNumber' => 'required', // Include the phoneNumber rule
         'password' => 'required|min:6',
@@ -31,6 +33,7 @@ class Register extends Component
         User::create([
             'name' => $this->name,
             'email' => $this->email,
+            'role' => $this->role,
             'username' => $this->username,
             'phoneNumber' => $this->phoneNumber,
             'password' => bcrypt($this->password)

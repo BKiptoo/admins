@@ -41,7 +41,7 @@
 </div>
 
 <div class="page-container">
-    @if(request()->is('admin/*'))
+    @if(request()->is('admin'))
         <livewire:admin.inc.header/>
         <livewire:admin.inc.sidebar/>
     @else

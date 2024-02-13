@@ -34,6 +34,12 @@
                                 </div>
 
                                 <div class="col-12">
+                                    <label for="role" class="form-label">Role</label>
+                                    <input type="role" wire:model="role" class="form-control" id="role" required>
+                                    @error('role') <div class="invalid-feedback">{{$message}}</div>@enderror
+                                </div>
+
+                                <div class="col-12">
                                     <label for="yourUsername" class="form-label">Username</label>
                                     <div class="input-group has-validation">
                                         <span class="input-group-text" id="inputGroupPrepend">@</span>
@@ -52,6 +58,12 @@
                                     <label for="yourPassword" class="form-label">Password</label>
                                     <input type="password" wire:model="password" class="form-control" id="yourPassword" required>
                                     @error('password') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                                    <input type="password" wire:model="password_confirmation" class="form-control" id="confirmPassword" required>
+                                    @error('password_confirmation') <div class="invalid-feedback">{{ $message }}</div> @enderror
                                 </div>
 
                                 <div class="col-12">

@@ -40,21 +40,21 @@ Route::middleware(['guest'])->group(function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('user.home', UserHome::class)->name('user.home');
+    Route::prefix('account')->group(function () {
+        Route::get('profile', UserProfile::class)->name('user.profile');
+        //    Route::get('credentials', UserPassword::class)->name('user.credentials');
+    });
 });
 
-Route::group([
-    'prefix' => 'account'
-], function () {
-    Route::get('profile', UserProfile::class)->name('user.profile');
-//    Route::get('credentials', UserPassword::class)->name('user.credentials');
-});
 // Admin Routes
 Route::prefix('admin')->group(function () {
+    // Guest routes
     Route::get('login', AdminLogin::class)->name('admin.login');
     Route::get('forgot', AdminForgot::class)->name('admin.forgot');
     Route::get('reset/{token}', AdminReset::class)->name('admin.reset');
 
-    Route::get('home', AdminHome::class)->name('admin.home');
+    // Authenticated routes
+    Route::middleware(['auth'])->group(function () {
+        Route::get('home', AdminHome::class)->name('admin.home');
+    });
 });
-
-

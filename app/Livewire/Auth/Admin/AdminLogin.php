@@ -10,37 +10,33 @@ class AdminLogin extends Component
 {
     public $username;
     public $password;
+    public $remember = false;
 
+    // Method to handle form submission and login
+    public function login()
+    {
+        // Validate form fields
+        $this->validate([
+            'username' => 'required',
+            'password' => 'required',
+        ]);
 
-    protected $rules = [
-        'username' => 'required|string',
-        'password' => 'required|string',
-    ];
+        $admin = Admin::where('username', $this->username)->first();
+        if ($admin && password_verify($this->password, $admin->password)) {
+//            dd(2023);
+            // Authentication passed, log in the admin
+//            Auth::login($admin, $this->remember);
+            // Redirect to admin home route
+            return redirect()->route('admin.home');
+        } else {
+            // Authentication failed, show error message
+            session()->flash('error', 'Incorrect username or password.');
+        }
+    }
 
+    // Method to render the login form
     public function render()
     {
         return view('livewire.auth.admin.login')->layout('components.layouts.auth');
-    }
-
-    public function login()
-    {
-//       dd(200);
-        $this->validate();
-
-        // Fetch admin user by username
-        $admin = Admin::where('username', $this->username)->first();
-
-        if (!$admin || !$admin->checkPassword($this->password)) {
-            // Authentication failed
-
-            $this->addError('username', 'Invalid username or password.');
-            return view('admin.home');
-        }
-
-        // Authenticate admin user
-        Auth::login($admin);
-
-        // Authentication successful
-        return redirect()->route('admin.home');
     }
 }
