@@ -7,6 +7,7 @@ use App\Livewire\Auth\Register;
 use App\Livewire\Auth\Reset;
 use App\Livewire\Auth\Verify;
 use App\Livewire\User\Account\UserProfile;
+use App\Livewire\User\Pages\Members;
 use App\Livewire\User\UserHome;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Auth\Admin\AdminLogin as AdminLogin;
@@ -40,6 +41,7 @@ Route::middleware(['guest'])->group(function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('user.home', UserHome::class)->name('user.home');
+    Route::get('/members', Members::class)->name('user.members');
     Route::prefix('account')->group(function () {
         Route::get('profile', UserProfile::class)->name('user.profile');
         //    Route::get('credentials', UserPassword::class)->name('user.credentials');

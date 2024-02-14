@@ -16,7 +16,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#">
+            <a class="nav-link collapsed" href="{{route('user.members')}}">
                 <i class="bi bi-people"></i>
                 <span>Members</span>
             </a>
