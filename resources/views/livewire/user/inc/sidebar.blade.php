@@ -30,7 +30,7 @@
             </a>
             <ul id="icons-nav-blog" class="nav-content collapse" data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="#">
+                    <a href="{{route('user.add')}}">
                         <i class="bi bi-plus-circle"></i><span>Add</span>
                     </a>
                 </li>

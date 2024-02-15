@@ -20,37 +20,48 @@
         </div>
         <div class="row">
             <div class="col">
-                <div class="table-responsive">
-                    <table class="table table-hover">
-                        <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Role</th>
-                            <th>Creation Date</th>
-                            <th>Action</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <!-- Loop through members data here -->
-                        @foreach($members as $member)
-                            <tr>
-                                <td>{{ $member->id }}</td>
-                                <td>{{ $member->name }}</td>
-                                <td>{{ $member->email }}</td>
-                                <td>{{ $member->role }}</td>
-                                <td>{{ $member->created_at->format('d/m/Y') }}</td>
-                                <td>
-                                    <a href="#" class="btn btn-sm btn-primary">Edit</a>
-                                    <a href="#" class="btn btn-sm btn-danger">Delete</a>
-                                </td>
-                            </tr>
-                        @endforeach
-                        </tbody>
-                    </table>
+                    <div class="col">
+                        <div class="table-responsive">
+                            <table id="members-table" class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Joined</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <!-- Loop through members data here -->
+                                @foreach($members as $member)
+                                    <tr>
+                                        <td>{{ $member->id }}</td>
+                                        <td>{{ $member->name }}</td>
+                                        <td>{{ $member->email }}</td>
+                                        <td>{{ $member->role }}</td>
+                                        <td>{{ $member->created_at->format('d/m/Y') }}</td>
+                                        <td>
+                                            <a href="#" class="btn btn-sm btn-primary">Edit</a>
+                                            <a href="#" wire:click="deleteMember({{ $member->id }})" class="btn btn-sm btn-danger" data-bs-original-title="Delete user">Delete</a>
+                                        </td>
+                                    </tr>
+                                @endforeach
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        @push('scripts')
+            <script>
+                document.addEventListener('livewire:load', function () {
+                    $('#members-table').DataTable();
+                });
+            </script>
+        @endpush
     </section>
 </main><!-- End #main -->
+

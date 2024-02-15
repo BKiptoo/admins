@@ -2,29 +2,35 @@
 
 namespace App\Livewire\User\Pages;
 
+use App\Models\Members as MembersModel; // Rename the model import
+
 use Livewire\Component;
 
-class Members extends Component
+class Members extends Component // Rename the class
 {
+    public $members;
+
+    public function deleteMember($memberId): void
+    {
+        $member = MembersModel::find($memberId);
+
+        if ($member) {
+            $member->delete();
+            $this->members = MembersModel::all();
+            $this->dispatchBrowserEvent('deleted', ['message' => 'Member deleted successfully!']);
+        } else {
+            $this->dispatchBrowserEvent('error', ['message' => 'Member not found!']);
+        }
+    }
+
     public function render()
     {
-//        // Fetch the members from the database
-//        $members = Members::all();
-//
-//        // Pass the members data to the view
-//        return view('livewire.user.pages.members', [
-//            'members' => $members,
-//        ]);
-        // Dummy data for members
-        $Members = [
-            (object)['id' => 1, 'name' => 'John Doe', 'email' => 'john@example.com', 'role' => 'Admin', 'created_at' => now()],
-            (object)['id' => 2, 'name' => 'Jane Smith', 'email' => 'jane@example.com', 'role' => 'User', 'created_at' => now()],
-            // Add more dummy members as needed
-        ];
+        $this->members = MembersModel::all();
 
-        // Pass the dummy members data to the view
-        return view('livewire.user.pages.members', [
-            'members' => $Members,
-        ]);
+        return view('livewire.user.pages.members');
+    }
+
+    private function dispatchBrowserEvent(string $string, array $array)
+    {
     }
 }
