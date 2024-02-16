@@ -1,42 +1,4 @@
 <main id="main" class="main">
-    <style>
-        /* Additional CSS styles */
-        .pagetitle {
-            margin-bottom: 20px;
-        }
-
-        .breadcrumb {
-            margin-bottom: 0;
-        }
-
-        .card {
-            margin-top: 20px;
-            border: 1px solid #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .card-body {
-            padding: 20px;
-        }
-
-        .form-label {
-            font-weight: bold;
-        }
-
-        .form-control {
-            margin-bottom: 15px;
-        }
-
-        .trix-editor {
-            margin-bottom: 15px;
-        }
-
-        .float-end {
-            float: right;
-        }
-    </style>
-
     <div class="pagetitle">
         <h1>Add Blog</h1>
         <nav>
@@ -50,10 +12,11 @@
     <div class="card">
         <div class="card-body">
             <br>
-            <form class="row g-3" wire:submit="submit">
+            <form class="row g-3" action="#" method="POST" enctype="multipart/form-data">
+                @csrf
                 <div class="col-md-6">
-                    <label for="form.category_id" class="form-label">Select Category</label>
-                    <select name="form.category_id" id="form.category_id" class="form-control" required wire:model.blur="form.category_id">
+                    <label for="category_id" class="form-label">Select Category</label>
+                    <select name="category_id" id="category_id" class="form-control" required>
                         <option selected>Select Category</option>
                         <option value="e7adbb8f-4063-48d4-9165-b43cedf53af4">Sabbath Service</option>
                         <option value="eee560fc-a8b3-4e20-892b-3610c2c22431">Bible Study</option>
@@ -62,27 +25,25 @@
                     </select>
                 </div>
                 <div class="col-md-6">
-                    <label for="form.name" class="form-label">Blog Title</label>
-                    <input type="text" class="form-control" id="form.name" required placeholder="Enter blog title..." wire:model.blur="form.name">
+                    <label for="name" class="form-label">Blog Title</label>
+                    <input type="text" class="form-control" id="name" name="name" required placeholder="Enter blog title...">
                 </div>
-                <div class="col-md-12" wire:ignore.self>
-                    <label for="form.tags" class="form-label">Church-related Tags Separated By Commas i.e <i class="text-primary">worship, prayer, community</i></label>
-                    <input type="text" class="form-control" id="form.tags" placeholder="Enter church-related tags..." wire:model.blur="form.tags">
-                </div>
-                <div class="col-md-12" wire:model.debounce.365ms="form.description" wire:ignore>
-                    <label for="blogDescription" class="form-label">Blog Description</label>
-                    <quill-editor id="blogDescription" wire:model.lazy="form.description"></quill-editor>
-                </div>
-
-
                 <div class="col-md-12">
-                    <label for="form.photo" class="form-label">Blog Banner</label>
-                    <input type="file" class="form-control" id="form.photo" accept="image/*" required placeholder="Upload image..." wire:model.blur="form.photo">
+                    <label for="tags" class="form-label">Church-related Tags Separated By Commas i.e <i class="text-primary">worship, prayer, community</i></label>
+                    <input type="text" class="form-control" id="tags" name="tags" placeholder="Enter church-related tags...">
                 </div>
-                <div wire:loading wire:target="form.photo"><span class="spinner-border spinner-border-sm"></span> Uploading</div>
+                <div class="col-md-12">
+                    <label for="description" class="form-label">Blog Description</label>
+                    <!-- Integrate a text editor here -->
+                    <textarea id="description" name="description" rows="6" class="form-control editor"></textarea>
+                </div>
+                <div class="col-md-12">
+                    <label for="photo" class="form-label">Blog Banner</label>
+                    <input type="file" class="form-control" id="photo" name="photo" accept="image/*" required placeholder="Upload image...">
+                </div>
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary btn-lg float-end" wire:loading.class="disabled" wire:offline.attr="disabled">
-                        <span wire:target="submit" wire:loading.class="spinner-border spinner-border-lg"></span> Save
+                    <button type="submit" class="btn btn-primary btn-lg float-end">
+                        Save
                     </button>
                 </div>
             </form>

@@ -601,31 +601,31 @@
 
                         <div class="news">
                             <div class="post-item clearfix">
-                                <img src="assets/img/news-1.jpg" alt="">
+                                <img src="{{asset('assets/img/news-1.jpg')}}" alt="">
                                 <h4><a href="#">New Community Outreach Program</a></h4>
                                 <p>Join us as we launch our new community outreach program aimed at helping those in need...</p>
                             </div>
 
                             <div class="post-item clearfix">
-                                <img src="assets/img/news-2.jpg" alt="">
+                                <img src="{{asset('assets/img/news-2.jpg')}}" alt="">
                                 <h4><a href="#">Upcoming Church Picnic</a></h4>
                                 <p>Get ready for a fun-filled day at our annual church picnic! Bring your family and friends...</p>
                             </div>
 
                             <div class="post-item clearfix">
-                                <img src="assets/img/news-3.jpg" alt="">
+                                <img src="{{asset('assets/img/news-3.jpg')}}" alt="">
                                 <h4><a href="#">Youth Group Retreat</a></h4>
                                 <p>All youth members are invited to join us for a weekend retreat filled with spiritual growth...</p>
                             </div>
 
                             <div class="post-item clearfix">
-                                <img src="assets/img/news-4.jpg" alt="">
+                                <img src="{{asset('assets/img/news-4.jpg')}}" alt="">
                                 <h4><a href="#">Volunteer Opportunities</a></h4>
                                 <p>We're looking for volunteers to assist with various church activities. If you're interested...</p>
                             </div>
 
                             <div class="post-item clearfix">
-                                <img src="assets/img/news-5.jpg" alt="">
+                                <img src="{{asset('assets/img/news-5.jpg')}}" alt="">
                                 <h4><a href="#">Bible Study Sessions</a></h4>
                                 <p>Join us every Wednesday evening for insightful Bible study sessions led by Pastor John...</p>
                             </div>
