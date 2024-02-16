@@ -12,7 +12,7 @@ class MembersTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
         // Create 10 dummy members using the MembersFactory
         Members::factory()->count(100)->create();

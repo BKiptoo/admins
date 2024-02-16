@@ -3,7 +3,7 @@
         <h1>Members</h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="{{route('user.home')}}">Home</a></li>
                 <li class="breadcrumb-item">Tables</li>
                 <li class="breadcrumb-item active">General</li>
             </ol>
@@ -20,48 +20,42 @@
         </div>
         <div class="row">
             <div class="col">
-                    <div class="col">
-                        <div class="table-responsive">
-                            <table id="members-table" class="table table-hover">
-                                <thead>
+                <div class="col">
+                    <div class="table-responsive">
+                        <table id="members-table" class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Joined</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <!-- Loop through members data here -->
+                            @foreach($members as $member)
                                 <tr>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Role</th>
-                                    <th>Joined</th>
-                                    <th>Action</th>
+                                    <td>{{ $member->id }}</td>
+                                    <td>{{ $member->name }}</td>
+                                    <td>{{ $member->email }}</td>
+                                    <td>{{ $member->role }}</td>
+                                    <td>{{ $member->created_at->format('d/m/Y') }}</td>
+                                    <td>
+                                        <a href="#" class="btn btn-sm btn-primary">Edit</a>
+                                        <a href="#" wire:click="deleteMember({{ $member->id }})"
+                                           class="btn btn-sm btn-danger" data-bs-original-title="Delete user">Delete</a>
+                                    </td>
                                 </tr>
-                                </thead>
-                                <tbody>
-                                <!-- Loop through members data here -->
-                                @foreach($members as $member)
-                                    <tr>
-                                        <td>{{ $member->id }}</td>
-                                        <td>{{ $member->name }}</td>
-                                        <td>{{ $member->email }}</td>
-                                        <td>{{ $member->role }}</td>
-                                        <td>{{ $member->created_at->format('d/m/Y') }}</td>
-                                        <td>
-                                            <a href="#" class="btn btn-sm btn-primary">Edit</a>
-                                            <a href="#" wire:click="deleteMember({{ $member->id }})" class="btn btn-sm btn-danger" data-bs-original-title="Delete user">Delete</a>
-                                        </td>
-                                    </tr>
-                                @endforeach
-
-                                </tbody>
-                            </table>
-                        </div>
+                            @endforeach
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-        @push('scripts')
-            <script>
-                document.addEventListener('livewire:load', function () {
-                    $('#members-table').DataTable();
-                });
-            </script>
-        @endpush
+            {{ $members->links() }}
+        </div>
     </section>
 </main><!-- End #main -->
 

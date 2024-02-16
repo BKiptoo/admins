@@ -2,32 +2,35 @@
 
 namespace App\Livewire\User\Pages;
 
-use App\Models\Members as MembersModel; // Rename the model import
-
+use App\Models\Members as MembersModel;
 use Livewire\Component;
+use Livewire\WithPagination;
+Use RealRashid\SweetAlert\Facades\Alert;
+
 
 class Members extends Component // Rename the class
 {
-    public $members;
+    use WithPagination;
+
+
 
     public function deleteMember($memberId): void
     {
-        $member = MembersModel::find($memberId);
+        $member = MembersModel::query()->findOrFail($memberId);
 
         if ($member) {
             $member->delete();
-            $this->members = MembersModel::all();
-            $this->dispatchBrowserEvent('deleted', ['message' => 'Member deleted successfully!']);
+            Alert::success('Success', 'Member deleted successfully!');
         } else {
-            $this->dispatchBrowserEvent('error', ['message' => 'Member not found!']);
+            Alert::error('Error', 'Member not found!');
         }
     }
 
     public function render()
     {
-        $this->members = MembersModel::all();
-
-        return view('livewire.user.pages.members');
+        return view('livewire.user.pages.members', [
+            'members' => MembersModel::query()->paginate(10)
+        ]);
     }
 
     private function dispatchBrowserEvent(string $string, array $array)

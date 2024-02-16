@@ -50,6 +50,8 @@
         <livewire:user.inc.sidebar/>
     @endif
     {{ $slot }}
+        @include('sweetalert::alert')
+
 </div>
 <!-- ======= Footer ======= -->
 <footer id="footer" class="footer">
