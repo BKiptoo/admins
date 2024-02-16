@@ -42,8 +42,9 @@
                                 <td>{{ $member->role }}</td>
                                 <td>{{ $member->created_at->format('d/m/Y') }}</td>
                                 <td>
-                                    <a href="#" class="btn btn-sm btn-primary">Edit</a>
-                                    <a href="#" wire:click="deleteMember({{ $member->id }})" class="btn btn-sm btn-danger" data-bs-original-title="Delete user">Delete</a>
+                                    <a href="#" class="btn btn-sm btn-primary"><i class="bx bx-edit-alt"></i></a>
+                                    <a href="#" wire:click="deleteMember({{ $member->id }})" class="btn btn-sm btn-danger" data-bs-original-title="Delete user"><i class="bx bx-trash"></i></a>
+
                                 </td>
                             </tr>
                         @endforeach
