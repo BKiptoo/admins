@@ -42,7 +42,7 @@
                                 <td>{{ $member->role }}</td>
                                 <td>{{ $member->created_at->format('d/m/Y') }}</td>
                                 <td>
-                                    <a href="#" class="btn btn-sm btn-primary"><i class="bx bx-edit-alt"></i></a>
+{{--                                    <a href="#" class="btn btn-sm btn-primary"><i class="bx bx-edit-alt"></i></a>--}}
                                     <a href="#" wire:click="deleteMember({{ $member->id }})" class="btn btn-sm btn-danger" data-bs-original-title="Delete user"><i class="bx bx-trash"></i></a>
 
                                 </td>
@@ -55,4 +55,5 @@
             </div>
         </div>
     </section>
-</main><!-- End #main -->
+</main>
+<!-- End #main -->

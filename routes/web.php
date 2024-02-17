@@ -8,6 +8,7 @@ use App\Livewire\Auth\Reset;
 use App\Livewire\Auth\Verify;
 use App\Livewire\User\Account\UserProfile;
 use App\Livewire\User\Blog\Add;
+use App\Livewire\User\Blog\ListBlog;
 use App\Livewire\User\Pages\Members;
 use App\Livewire\User\UserHome;
 use Illuminate\Support\Facades\Route;
@@ -43,10 +44,12 @@ Route::middleware(['guest'])->group(function () {
 Route::middleware(['auth'])->group(function () {
     Route::get('user.home', UserHome::class)->name('user.home');
     Route::get('/members', Members::class)->name('user.members');
-    Route::get('/add',Add::class)->name('user.add');
+    Route::get('/add', Add::class)->name('user.add');
+    Route::post('/store', [Add::class, 'store'])->name('blog.store'); // Route for storing blog data
+    Route::get('/listblog', ListBlog::class)->name('user.listblog');
     Route::prefix('account')->group(function () {
         Route::get('profile', UserProfile::class)->name('user.profile');
-        //    Route::get('credentials', UserPassword::class)->name('user.credentials');
+        // Route::get('credentials', UserPassword::class)->name('user.credentials');
     });
 });
 

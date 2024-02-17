@@ -35,7 +35,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{route('user.listblog')}}">
                         <i class="bi bi-list"></i><span>List</span>
                     </a>
                 </li>
@@ -100,6 +100,25 @@
                 </li>
             </ul>
         </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#icons-nav-shop" data-bs-toggle="collapse" href="#">
+                <i class="bx bx-shopping-bag"></i><span>Shop</span><i class="bx bx-chevron-down ms-auto"></i>
+            </a>
+            <ul id="icons-nav-shop" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="#">
+                        <i class="bi bi-cart-plus"></i><span>Add</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="bi bi-shop"></i><span>View Shop</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
 
 
         <li class="nav-item">

@@ -12,7 +12,7 @@
     <div class="card">
         <div class="card-body">
             <br>
-            <form class="row g-3" action="#" method="POST" enctype="multipart/form-data">
+            <form class="row g-3" wire:submit.prevent="store" enctype="multipart/form-data">
                 @csrf
                 <div class="col-md-6">
                     <label for="category_id" class="form-label">Select Category</label>
@@ -22,7 +22,14 @@
                         <option value="eee560fc-a8b3-4e20-892b-3610c2c22431">Bible Study</option>
                         <option value="b122075a-cb0a-4e95-9383-35e75c33dcc1">Prayer Meeting</option>
                         <option value="ede13e11-46d8-41dd-9d05-6eca60e55124">Youth Fellowship</option>
+                        <option value="ede13e11-46d8-41dd-9d05-6eca60e55124">Health</option>
+                        <option value="526e027b-892f-4987-b098-296e6b2e0dd1">Community Outreach</option>
+                        <option value="7e3a05ee-7d24-4b95-9dbf-8a44ff5a799a">Mission Trips</option>
+                        <option value="d5b72ef3-d7c5-4542-a2b4-42e7d89a325d">Volunteer Programs</option>
+                        <option value="38b1a824-22f0-4bb8-9cb2-0f0b23202c6d">Charity Events</option>
+                        <option value="c7e37878-d3d0-4b99-9e3b-6d4fe0c24ac8">Church Camps</option>
                     </select>
+
                 </div>
                 <div class="col-md-6">
                     <label for="name" class="form-label">Blog Title</label>
