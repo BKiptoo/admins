@@ -4,7 +4,7 @@ namespace App\Livewire\User\Slide;
 
 use Livewire\Component;
 
-class Add extends Component
+class AddSlide extends Component
 {
     public function render()
     {

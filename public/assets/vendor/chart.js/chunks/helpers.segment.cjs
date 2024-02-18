@@ -1453,7 +1453,7 @@ function drawBackdrop(ctx, opts) {
     ctx.restore();
 }
 /**
- * Add a path of a rectangle with rounded corners to the current sub-path
+ * AddSlide a path of a rectangle with rounded corners to the current sub-path
  * @param ctx - Context
  * @param rect - Bounding rect
  */ function addRoundedRectPath(ctx, rect) {

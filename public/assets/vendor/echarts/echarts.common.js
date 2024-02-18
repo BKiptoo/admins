@@ -7526,7 +7526,7 @@
             max = remainder[i];
             maxId = i;
           }
-        } // Add a vote to max remainder.
+        } // AddSlide a vote to max remainder.
 
 
         ++seats[maxId];
@@ -12253,7 +12253,7 @@
     var getECData = makeInner();
     var setCommonECData = function (seriesIndex, dataType, dataIdx, el) {
       if (el) {
-        var ecData = getECData(el); // Add data index and series index for indexing the data by element
+        var ecData = getECData(el); // AddSlide data index and series index for indexing the data by element
         // Useful in tooltip
 
         ecData.dataIndex = dataIdx;
@@ -16725,7 +16725,7 @@
     }
 
     /**
-     * Add a comma each three digit.
+     * AddSlide a comma each three digit.
      */
 
     function addCommas(x) {
@@ -30613,7 +30613,7 @@
         var cbModeMultiple = this._diffModeMultiple;
 
         for (var i = 0; i < arr.length; i++) {
-          // Add prefix to avoid conflict with Object.prototype.
+          // AddSlide prefix to avoid conflict with Object.prototype.
           var key = '_ec_' + this[keyGetterName](arr[i], i);
 
           if (!cbModeMultiple) {
@@ -32717,7 +32717,7 @@
         // Compatible with previous design, value axis (time axis) only stack by index.
         // It may make sense if the user provides elaborately constructed data.
         byIndex = true;
-      } // Add stack dimension, they can be both calculated by coordinate system in `unionExtent`.
+      } // AddSlide stack dimension, they can be both calculated by coordinate system in `unionExtent`.
       // That put stack logic in List is for using conveniently in echarts extensions, but it
       // might not be a good way.
 
@@ -34550,7 +34550,7 @@
           addTicksInSpan(interval, startTick, endTick, getterName, setterName, isDate, newAddedTicks);
 
           if (unitName === 'year' && levelTicks.length > 1 && i === 0) {
-            // Add nearest years to the left extent.
+            // AddSlide nearest years to the left extent.
             levelTicks.unshift({
               value: levelTicks[0].value - interval
             });
@@ -37174,7 +37174,7 @@
         var transform = labelItem.transform;
         var label = labelItem.label;
         var labelLine = labelItem.labelLine;
-        globalRect.copy(labelItem.rect); // Add a threshold because layout may be aligned precisely.
+        globalRect.copy(labelItem.rect); // AddSlide a threshold because layout may be aligned precisely.
 
         globalRect.width -= 0.1;
         globalRect.height -= 0.1;
@@ -40243,7 +40243,7 @@
               y: point[1]
             };
             disableAnimation ? symbolEl.attr(target) : updateProps(symbolEl, target, seriesModel);
-          } // Add back
+          } // AddSlide back
 
 
           group.add(symbolEl);
@@ -49507,7 +49507,7 @@
           dataIndices = result.dataIndices;
           seriesNestestValue = result.nestestValue;
         } else {
-          dataIndices = series.getData().indicesOfNearest(dataDim[0], value, // Add a threshold to avoid find the wrong dataIndex
+          dataIndices = series.getData().indicesOfNearest(dataDim[0], value, // AddSlide a threshold to avoid find the wrong dataIndex
           // when data length is not same.
           // false,
           axis.type === 'category' ? 0.5 : null);
@@ -56619,7 +56619,7 @@
       var height = size[1];
 
       if (gapH != null) {
-        // Add extra 2 pixels for this case:
+        // AddSlide extra 2 pixels for this case:
         // At present the "values" in default tooltip are using CSS `float: right`.
         // When the right edge of the tooltip box is on the right side of the
         // viewport, the `float` layout might push the "values" to the second line.
@@ -59612,7 +59612,7 @@
           }, {
             inheritColor: textColor
           })
-        })); // Add a invisible rect to increase the area of mouse hover
+        })); // AddSlide a invisible rect to increase the area of mouse hover
 
         var hitRect = new Rect({
           shape: itemGroup.getBoundingRect(),

@@ -65,7 +65,7 @@ export declare function _bezierCurveTo(ctx: CanvasRenderingContext2D, previous: 
  */
 export declare function renderText(ctx: CanvasRenderingContext2D, text: string | string[], x: number, y: number, font: CanvasFontSpec, opts?: RenderTextOpts): void;
 /**
- * Add a path of a rectangle with rounded corners to the current sub-path
+ * AddSlide a path of a rectangle with rounded corners to the current sub-path
  * @param ctx - Context
  * @param rect - Bounding rect
  */

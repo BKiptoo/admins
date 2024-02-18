@@ -34,7 +34,7 @@ export class Animator {
        */
     listen(chart: Chart, event: string, cb: Function): void;
     /**
-       * Add animations
+       * AddSlide animations
        * @param {Chart} chart
        * @param {Animation[]} items - animations
        */

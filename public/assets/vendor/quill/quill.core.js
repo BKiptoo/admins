@@ -178,7 +178,7 @@ function create(input, value) {
         throw new ParchmentError("Unable to create " + input + " blot");
     }
     var BlotClass = match;
-    var node = 
+    var node =
     // @ts-ignore
     input instanceof Node || input['nodeType'] === Node.TEXT_NODE ? input : BlotClass.create(value);
     return new BlotClass(node, value);
@@ -7458,7 +7458,7 @@ function diff_halfMatch_(text1, text2) {
  * @param {Array} diffs Array of diff tuples.
  */
 function diff_cleanupMerge(diffs) {
-  diffs.push([DIFF_EQUAL, '']);  // Add a dummy entry at the end.
+  diffs.push([DIFF_EQUAL, '']);  // AddSlide a dummy entry at the end.
   var pointer = 0;
   var count_delete = 0;
   var count_insert = 0;
@@ -7957,7 +7957,7 @@ EventEmitter.prototype.emit = function emit(event, a1, a2, a3, a4, a5) {
 };
 
 /**
- * Add a listener for a given event.
+ * AddSlide a listener for a given event.
  *
  * @param {String|Symbol} event The event name.
  * @param {Function} fn The listener function.
@@ -7977,7 +7977,7 @@ EventEmitter.prototype.on = function on(event, fn, context) {
 };
 
 /**
- * Add a one-time listener for a given event.
+ * AddSlide a one-time listener for a given event.
  *
  * @param {String|Symbol} event The event name.
  * @param {Function} fn The listener function.

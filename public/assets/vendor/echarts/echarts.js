@@ -7526,7 +7526,7 @@
             max = remainder[i];
             maxId = i;
           }
-        } // Add a vote to max remainder.
+        } // AddSlide a vote to max remainder.
 
 
         ++seats[maxId];
@@ -12351,7 +12351,7 @@
     var getECData = makeInner();
     var setCommonECData = function (seriesIndex, dataType, dataIdx, el) {
       if (el) {
-        var ecData = getECData(el); // Add data index and series index for indexing the data by element
+        var ecData = getECData(el); // AddSlide data index and series index for indexing the data by element
         // Useful in tooltip
 
         ecData.dataIndex = dataIdx;
@@ -16894,7 +16894,7 @@
     }
 
     /**
-     * Add a comma each three digit.
+     * AddSlide a comma each three digit.
      */
 
     function addCommas(x) {
@@ -30969,7 +30969,7 @@
         var cbModeMultiple = this._diffModeMultiple;
 
         for (var i = 0; i < arr.length; i++) {
-          // Add prefix to avoid conflict with Object.prototype.
+          // AddSlide prefix to avoid conflict with Object.prototype.
           var key = '_ec_' + this[keyGetterName](arr[i], i);
 
           if (!cbModeMultiple) {
@@ -33073,7 +33073,7 @@
         // Compatible with previous design, value axis (time axis) only stack by index.
         // It may make sense if the user provides elaborately constructed data.
         byIndex = true;
-      } // Add stack dimension, they can be both calculated by coordinate system in `unionExtent`.
+      } // AddSlide stack dimension, they can be both calculated by coordinate system in `unionExtent`.
       // That put stack logic in List is for using conveniently in echarts extensions, but it
       // might not be a good way.
 
@@ -34941,7 +34941,7 @@
           addTicksInSpan(interval, startTick, endTick, getterName, setterName, isDate, newAddedTicks);
 
           if (unitName === 'year' && levelTicks.length > 1 && i === 0) {
-            // Add nearest years to the left extent.
+            // AddSlide nearest years to the left extent.
             levelTicks.unshift({
               value: levelTicks[0].value - interval
             });
@@ -37865,7 +37865,7 @@
         var transform = labelItem.transform;
         var label = labelItem.label;
         var labelLine = labelItem.labelLine;
-        globalRect.copy(labelItem.rect); // Add a threshold because layout may be aligned precisely.
+        globalRect.copy(labelItem.rect); // AddSlide a threshold because layout may be aligned precisely.
 
         globalRect.width -= 0.1;
         globalRect.height -= 0.1;
@@ -37975,7 +37975,7 @@
         this._chartViewList = [];
       };
       /**
-       * Add label to manager
+       * AddSlide label to manager
        */
 
 
@@ -41401,7 +41401,7 @@
               y: point[1]
             };
             disableAnimation ? symbolEl.attr(target) : updateProps(symbolEl, target, seriesModel);
-          } // Add back
+          } // AddSlide back
 
 
           group.add(symbolEl);
@@ -50202,7 +50202,7 @@
           }
 
         var lineStyle = lineStyleModel.getLineStyle();
-        var areaStyle = areaStyleModel.getAreaStyle(); // Add splitArea before splitLine
+        var areaStyle = areaStyleModel.getAreaStyle(); // AddSlide splitArea before splitLine
 
         each(splitAreas, function (splitAreas, idx) {
           this.group.add(mergePath$1(splitAreas, {
@@ -53212,7 +53212,7 @@
       var dataNameMap = {};
       each(datas, function (data) {
         data.each(data.mapDimension('value'), function (value, idx) {
-          // Add prefix to avoid conflict with Object.prototype.
+          // AddSlide prefix to avoid conflict with Object.prototype.
           var mapKey = 'ec-' + data.getName(idx);
           dataNameMap[mapKey] = dataNameMap[mapKey] || [];
 
@@ -53687,7 +53687,7 @@
         }
       };
       /**
-       * Add geoCoord for indexing by name
+       * AddSlide geoCoord for indexing by name
        */
 
 
@@ -55963,7 +55963,7 @@
         var expandAndCollapse = option.expandAndCollapse;
         var expandTreeDepth = expandAndCollapse && option.initialTreeDepth >= 0 ? option.initialTreeDepth : treeDepth;
         tree.root.eachNode('preorder', function (node) {
-          var item = node.hostTree.data.getRawDataItem(node.dataIndex); // Add item.collapsed != null, because users can collapse node original in the series.data.
+          var item = node.hostTree.data.getRawDataItem(node.dataIndex); // AddSlide item.collapsed != null, because users can collapse node original in the series.data.
 
           node.isExpand = item && item.collapsed != null ? !item.collapsed : node.depth <= expandTreeDepth;
         });
@@ -56012,7 +56012,7 @@
           value: value,
           noValue: isNaN(value) || value == null
         });
-      }; // Add tree path to tooltip param
+      }; // AddSlide tree path to tooltip param
 
 
       TreeSeriesModel.prototype.getDataParams = function (dataIndex) {
@@ -56463,7 +56463,7 @@
         });
       };
       /**
-       * Add tree path to tooltip param
+       * AddSlide tree path to tooltip param
        *
        * @override
        * @param {number} dataIndex
@@ -59170,7 +59170,7 @@
         var data = seriesModel.getData();
         var categoryNameIdxMap = {};
         categoriesData.each(function (idx) {
-          var name = categoriesData.getName(idx); // Add prefix to avoid conflict with Object.prototype.
+          var name = categoriesData.getName(idx); // AddSlide prefix to avoid conflict with Object.prototype.
 
           categoryNameIdxMap['ec-' + name] = idx;
           var itemModel = categoriesData.getItemModel(idx);
@@ -61210,7 +61210,7 @@
         return this._directed;
       };
       /**
-       * Add a new node
+       * AddSlide a new node
        */
 
       Graph.prototype.addNode = function (id, dataIndex) {
@@ -61247,7 +61247,7 @@
         return this._nodesMap[generateNodeKey(id)];
       };
       /**
-       * Add a new edge
+       * AddSlide a new edge
        */
 
       Graph.prototype.addEdge = function (n1, n2, dataIndex) {
@@ -62447,7 +62447,7 @@
                   endAngle: linearMap(val, valueExtent, angleExtent, isClip)
                 }
               }, seriesModel);
-              group.add(progress); // Add data index and series index for indexing the data by element
+              group.add(progress); // AddSlide data index and series index for indexing the data by element
               // Useful in tooltip
 
               setCommonECData(seriesModel.seriesIndex, data.dataType, idx, progress);
@@ -62478,7 +62478,7 @@
                   endAngle: linearMap(val, valueExtent, angleExtent, isClip)
                 }
               }, seriesModel);
-              group.add(progress); // Add data index and series index for indexing the data by element
+              group.add(progress); // AddSlide data index and series index for indexing the data by element
               // Useful in tooltip
 
               setCommonECData(seriesModel.seriesIndex, data.dataType, newIdx, progress);
@@ -63096,7 +63096,7 @@
 
       for (var i = 0, len = data.count(); i < len; i++) {
         indices[i] = i;
-      } // Add custom sortable function & none sortable opetion by "options.sort"
+      } // AddSlide custom sortable function & none sortable opetion by "options.sort"
 
 
       if (isFunction(sort)) {
@@ -66057,7 +66057,7 @@
           }
 
       }
-    } // Add animation to the view
+    } // AddSlide animation to the view
 
 
     function createGridClipShape$1(rect, seriesModel, cb) {
@@ -67994,7 +67994,7 @@
               x: pmin[0],
               y: pmin[1],
               width:  candleWidth ,
-              height:  pmax[1] - pmin[1] 
+              height:  pmax[1] - pmin[1]
             };
           }
 
@@ -70312,7 +70312,7 @@
           }
 
           data.setItemGraphicEl(newIndex, bar);
-          bar.__pictorialSymbolMeta = symbolMeta; // Add back
+          bar.__pictorialSymbolMeta = symbolMeta; // AddSlide back
 
           group.add(bar);
           updateCommon$1(bar, opt, symbolMeta);
@@ -71817,7 +71817,7 @@
                 removeNode(oldNode);
               }
             } else if (newNode) {
-              // Add
+              // AddSlide
               var piece = new SunburstPiece(newNode, seriesModel, ecModel, api);
               group.add(piece); // For tooltip
 
@@ -71844,7 +71844,7 @@
               // Update
               self.virtualPiece.updateData(false, virtualRoot, seriesModel, ecModel, api);
             } else {
-              // Add
+              // AddSlide
               self.virtualPiece = new SunburstPiece(virtualRoot, seriesModel, ecModel, api);
               group.add(self.virtualPiece);
             } // TODO event scope
@@ -75568,7 +75568,7 @@
           dataIndices = result.dataIndices;
           seriesNestestValue = result.nestestValue;
         } else {
-          dataIndices = series.getData().indicesOfNearest(dataDim[0], value, // Add a threshold to avoid find the wrong dataIndex
+          dataIndices = series.getData().indicesOfNearest(dataDim[0], value, // AddSlide a threshold to avoid find the wrong dataIndex
           // when data length is not same.
           // false,
           axis.type === 'category' ? 0.5 : null);
@@ -77441,7 +77441,7 @@
         this.type = 'single';
         this.dimension = 'single';
         /**
-         * Add it just for draw tooltip.
+         * AddSlide it just for draw tooltip.
          */
 
         this.dimensions = singleDimensions;
@@ -83821,7 +83821,7 @@
       var height = size[1];
 
       if (gapH != null) {
-        // Add extra 2 pixels for this case:
+        // AddSlide extra 2 pixels for this case:
         // At present the "values" in default tooltip are using CSS `float: right`.
         // When the right edge of the tooltip box is on the right side of the
         // viewport, the `float` layout might push the "values" to the second line.
@@ -84322,7 +84322,7 @@
           // Only the first throttle setting works.
           throttleType = brushOption.throttleType;
           throttleDelay = brushOption.throttleDelay;
-        } // Add boundingRect and selectors to range.
+        } // AddSlide boundingRect and selectors to range.
 
 
         var areas = map(brushModel.areas, function (area) {
@@ -88196,7 +88196,7 @@
           }, {
             inheritColor: textColor
           })
-        })); // Add a invisible rect to increase the area of mouse hover
+        })); // AddSlide a invisible rect to increase the area of mouse hover
 
         var hitRect = new Rect({
           shape: itemGroup.getBoundingRect(),

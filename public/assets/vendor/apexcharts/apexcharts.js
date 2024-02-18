@@ -10948,7 +10948,7 @@
 
         for (var i = 0, logTick = logMin; i < ticks; i++, logTick += logTickSpacing) {
           logs.push(Math.pow(base, logTick));
-        } // Add a final tick at the yMax.
+        } // AddSlide a final tick at the yMax.
 
 
         logs.push(Math.pow(base, logMax));
@@ -23801,20 +23801,20 @@
   }();
 
   /**
-   * 
+   *
    * @yr/monotone-cubic-spline (https://github.com/YR/monotone-cubic-spline)
-   * 
+   *
    * The MIT License (MIT)
-   * 
+   *
    * Copyright (c) 2015 yr.no
-   * 
+   *
    * Permission is hereby granted, free of charge, to any person obtaining a copy of
    * this software and associated documentation files (the "Software"), to deal in
    * the Software without restriction, including without limitation the rights to
    * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
    * the Software, and to permit persons to whom the Software is furnished to do so,
    * subject to the following conditions:
-   * 
+   *
    * The above copyright notice and this permission notice shall be included in all
    * copies or substantial portions of the Software.
 
@@ -23908,9 +23908,9 @@
       var p0 = _points[0];
       var pts = [];
       var t = tgts[1];
-      var t0 = tgts[0]; // Add starting 'M' and 'C' points
+      var t0 = tgts[0]; // AddSlide starting 'M' and 'C' points
 
-      pts.push(p0, [p0[0] + t0[0], p0[1] + t0[1], p[0] - t[0], p[1] - t[1], p[0], p[1]]); // Add 'S' points
+      pts.push(p0, [p0[0] + t0[0], p0[1] + t0[1], p[0] - t[0], p[1] - t[1], p[0], p[1]]); // AddSlide 'S' points
 
       for (var i = 2, n = tgts.length; i < n; i++) {
         var _p = _points[i];
@@ -23932,7 +23932,7 @@
       var pts = points.slice(start, end);
 
       if (start) {
-        // Add additional 'C' points
+        // AddSlide additional 'C' points
         if (pts[1].length < 6) {
           var n = pts[0].length;
           pts[1] = [pts[0][n - 2] * 2 - pts[0][n - 4], pts[0][n - 1] * 2 - pts[0][n - 3]].concat(pts[1]);
@@ -27665,7 +27665,7 @@
           }
         }
       },
-      // Add methods
+      // AddSlide methods
       extend: {
         // Stringalize
         toString: function toString() {
@@ -27678,7 +27678,7 @@
         valueOf: function valueOf() {
           return this.value;
         },
-        // Add number
+        // AddSlide number
         plus: function plus(number) {
           number = new SVG.Number(number);
           return new SVG.Number(this + number, this.unit || number.unit);
@@ -27743,7 +27743,7 @@
           this._stroke = node.getAttribute('stroke') || this._stroke;
         }
       },
-      // Add class methods
+      // AddSlide class methods
       extend: {
         // Move over x-axis
         x: function x(_x) {
@@ -27805,11 +27805,11 @@
           this.after(element).remove();
           return element;
         },
-        // Add element to given container and return self
+        // AddSlide element to given container and return self
         addTo: function addTo(parent) {
           return parent.put(this);
         },
-        // Add element to given container and return container
+        // AddSlide element to given container and return container
         putIn: function putIn(parent) {
           return parent.add(this);
         },
@@ -27842,7 +27842,7 @@
         hasClass: function hasClass(name) {
           return this.classes().indexOf(name) != -1;
         },
-        // Add class to the node
+        // AddSlide class to the node
         addClass: function addClass(name) {
           if (!this.hasClass(name)) {
             var array = this.classes();
@@ -28446,7 +28446,7 @@
         }
       },
       parent: SVG.Element,
-      // Add method to parent elements
+      // AddSlide method to parent elements
       construct: {
         // Get fx module or create a new one, then animate with given duration and ease
         animate: function animate(o, ease, delay) {
@@ -28499,7 +28499,7 @@
       }
     });
     SVG.extend(SVG.FX, {
-      // Add animatable attributes
+      // AddSlide animatable attributes
       attr: function attr(a, v, relative) {
         // apply attributes individually
         if (_typeof(a) === 'object') {
@@ -28512,7 +28512,7 @@
 
         return this;
       },
-      // Add animatable plot
+      // AddSlide animatable plot
       plot: function plot(a, b, c, d) {
         // Lines can be plotted with 4 arguments
         if (arguments.length == 4) {
@@ -28617,7 +28617,7 @@
           this[abcdef[i]] = source[abcdef[i]] != null ? source[abcdef[i]] : base[abcdef[i]];
         }
       },
-      // Add methods
+      // AddSlide methods
       extend: {
         // Extract individual transformations
         extract: function extract() {
@@ -28683,7 +28683,7 @@
       },
       // Define parent
       parent: SVG.Element,
-      // Add parent method
+      // AddSlide parent method
       construct: {
         // Get current matrix
         ctm: function ctm() {
@@ -28730,7 +28730,7 @@
         this.x = source.x;
         this.y = source.y;
       },
-      // Add methods
+      // AddSlide methods
       extend: {
         // Clone point
         clone: function clone() {
@@ -28829,7 +28829,7 @@
       }
     });
     SVG.extend(SVG.Element, {
-      // Add transformations
+      // AddSlide transformations
       transform: function transform(o, relative) {
         // get target in case of the fx module, otherwise reference this
         var target = this,
@@ -28965,7 +28965,7 @@
       },
       // Inherit from
       inherit: SVG.Element,
-      // Add class methods
+      // AddSlide class methods
       extend: {
         // Returns all child elements
         children: function children() {
@@ -28973,7 +28973,7 @@
             return SVG.adopt(node);
           });
         },
-        // Add given element at a position
+        // AddSlide given element at a position
         add: function add(element, i) {
           if (i == null) {
             this.node.appendChild(element.node);
@@ -29075,9 +29075,9 @@
     SVG.ViewBox = SVG.invent({
       // Define parent
       parent: SVG.Container,
-      // Add parent method
+      // AddSlide parent method
       construct: {}
-    }) // Add events to elements
+    }) // AddSlide events to elements
     ;
     ['click', 'dblclick', 'mousedown', 'mouseup', 'mouseover', 'mouseout', 'mousemove', // , 'mouseenter' -> not supported by IE
     // , 'mouseleave' -> not supported by IE
@@ -29092,7 +29092,7 @@
 
     SVG.listeners = [];
     SVG.handlerMap = [];
-    SVG.listenerId = 0; // Add event binder in the SVG namespace
+    SVG.listenerId = 0; // AddSlide event binder in the SVG namespace
 
     SVG.on = function (node, event, listener, binding, options) {
       // create listener, get object-index
@@ -29115,7 +29115,7 @@
       node.addEventListener(ev, l, options || {
         passive: true
       });
-    }; // Add event unbinder in the SVG namespace
+    }; // AddSlide event unbinder in the SVG namespace
 
 
     SVG.off = function (node, event, listener) {
@@ -29214,7 +29214,7 @@
       create: 'g',
       // Inherit from
       inherit: SVG.Container,
-      // Add class methods
+      // AddSlide class methods
       extend: {
         // Move over x-axis
         x: function x(_x2) {
@@ -29223,7 +29223,7 @@
           }, true);
         }
       },
-      // Add parent method
+      // AddSlide parent method
       construct: {
         // Create a group element
         group: function group() {
@@ -29253,9 +29253,9 @@
       },
       // Inherit from
       inherit: SVG.Container,
-      // Add class methods
+      // AddSlide class methods
       extend: {
-        // Add namespaces
+        // AddSlide namespaces
         namespace: function namespace() {
           return this.attr({
             xmlns: SVG.ns,
@@ -29338,9 +29338,9 @@
       },
       // Inherit from
       inherit: SVG.Container,
-      // Add class methods
+      // AddSlide class methods
       extend: {
-        // Add a color stop
+        // AddSlide a color stop
         at: function at(offset, color, opacity) {
           return this.put(new SVG.Stop()).update(offset, color, opacity);
         },
@@ -29369,14 +29369,14 @@
           return SVG.Container.prototype.attr.call(this, a, b, c);
         }
       },
-      // Add parent method
+      // AddSlide parent method
       construct: {
         // Create gradient element in defs
         gradient: function gradient(type, block) {
           return this.defs().gradient(type, block);
         }
       }
-    }); // Add animatable methods to both gradient and fx module
+    }); // AddSlide animatable methods to both gradient and fx module
 
     SVG.extend(SVG.Gradient, SVG.FX, {
       // From position
@@ -29412,7 +29412,7 @@
       create: 'stop',
       // Inherit from
       inherit: SVG.Element,
-      // Add class methods
+      // AddSlide class methods
       extend: {
         // add color stops
         update: function update(o) {
@@ -29437,7 +29437,7 @@
       create: 'pattern',
       // Inherit from
       inherit: SVG.Container,
-      // Add class methods
+      // AddSlide class methods
       extend: {
         // Return the fill id
         fill: function fill() {
@@ -29464,7 +29464,7 @@
           return SVG.Container.prototype.attr.call(this, a, b, c);
         }
       },
-      // Add parent method
+      // AddSlide parent method
       construct: {
         // Create pattern element in defs
         pattern: function pattern(width, height, block) {
@@ -29509,7 +29509,7 @@
       create: 'use',
       // Inherit from
       inherit: SVG.Shape,
-      // Add class methods
+      // AddSlide class methods
       extend: {
         // Use element as a reference
         element: function element(_element, file) {
@@ -29517,7 +29517,7 @@
           return this.attr('href', (file || '') + '#' + _element, SVG.xlink);
         }
       },
-      // Add parent method
+      // AddSlide parent method
       construct: {
         // Create a use element
         use: function use(element, file) {
@@ -29530,7 +29530,7 @@
       create: 'rect',
       // Inherit from
       inherit: SVG.Shape,
-      // Add parent method
+      // AddSlide parent method
       construct: {
         // Create a rect element
         rect: function rect(width, height) {
@@ -29543,7 +29543,7 @@
       create: 'circle',
       // Inherit from
       inherit: SVG.Shape,
-      // Add parent method
+      // AddSlide parent method
       construct: {
         // Create circle element, based on ellipse
         circle: function circle(size) {
@@ -29566,7 +29566,7 @@
       create: 'ellipse',
       // Inherit from
       inherit: SVG.Shape,
-      // Add parent method
+      // AddSlide parent method
       construct: {
         // Create an ellipse
         ellipse: function ellipse(width, height) {
@@ -29583,7 +29583,7 @@
       ry: function ry(_ry2) {
         return this.attr('ry', _ry2);
       }
-    }); // Add common method
+    }); // AddSlide common method
 
     SVG.extend(SVG.Circle, SVG.Ellipse, {
       // Move over x-axis
@@ -29621,7 +29621,7 @@
       create: 'line',
       // Inherit from
       inherit: SVG.Shape,
-      // Add class methods
+      // AddSlide class methods
       extend: {
         // Get array
         array: function array() {
@@ -29654,7 +29654,7 @@
           return this.attr(this.array().size(p.width, p.height).toLine());
         }
       },
-      // Add parent method
+      // AddSlide parent method
       construct: {
         // Create a line element
         line: function line(x1, y1, x2, y2) {
@@ -29669,7 +29669,7 @@
       create: 'polyline',
       // Inherit from
       inherit: SVG.Shape,
-      // Add parent method
+      // AddSlide parent method
       construct: {
         // Create a wrapped polyline element
         polyline: function polyline(p) {
@@ -29683,7 +29683,7 @@
       create: 'polygon',
       // Inherit from
       inherit: SVG.Shape,
-      // Add parent method
+      // AddSlide parent method
       construct: {
         // Create a wrapped polygon element
         polygon: function polygon(p) {
@@ -29691,7 +29691,7 @@
           return this.put(new SVG.Polygon()).plot(p || new SVG.PointArray());
         }
       }
-    }); // Add polygon-specific functions
+    }); // AddSlide polygon-specific functions
 
     SVG.extend(SVG.Polyline, SVG.Polygon, {
       // Get array
@@ -29745,7 +29745,7 @@
       create: 'path',
       // Inherit from
       inherit: SVG.Shape,
-      // Add class methods
+      // AddSlide class methods
       extend: {
         // Define morphable array
         morphArray: SVG.PathArray,
@@ -29763,7 +29763,7 @@
           return this;
         }
       },
-      // Add parent method
+      // AddSlide parent method
       construct: {
         // Create a wrapped path element
         path: function path(d) {
@@ -29777,27 +29777,27 @@
       create: 'image',
       // Inherit from
       inherit: SVG.Shape,
-      // Add class methods
+      // AddSlide class methods
       extend: {
-        // (re)load image	
+        // (re)load image
         load: function load(url) {
           if (!url) return this;
           var self = this,
-              img = new window.Image(); // preload image	
+              img = new window.Image(); // preload image
 
           SVG.on(img, 'load', function () {
             SVG.off(img);
             var p = self.parent(SVG.Pattern);
-            if (p === null) return; // ensure image size	
+            if (p === null) return; // ensure image size
 
             if (self.width() == 0 && self.height() == 0) {
               self.size(img.width, img.height);
-            } // ensure pattern size if not set	
+            } // ensure pattern size if not set
 
 
             if (p && p.width() == 0 && p.height() == 0) {
               p.size(self.width(), self.height());
-            } // callback	
+            } // callback
 
 
             if (typeof self._loaded === 'function') {
@@ -29818,7 +29818,7 @@
           });
           return this.attr('href', img.src = this.src = url, SVG.xlink);
         },
-        // Add loaded callback	
+        // AddSlide loaded callback
         loaded: function loaded(_loaded) {
           this._loaded = _loaded;
           return this;
@@ -29828,9 +29828,9 @@
           return this;
         }
       },
-      // Add parent method
+      // AddSlide parent method
       construct: {
-        // create image element, load image and set its size	
+        // create image element, load image and set its size
         image: function image(source, width, height) {
           return this.put(new SVG.Image()).load(source).size(width || 0, height || width || 0);
         }
@@ -29851,7 +29851,7 @@
       },
       // Inherit from
       inherit: SVG.Shape,
-      // Add class methods
+      // AddSlide class methods
       extend: {
         // Move over x-axis
         x: function x(_x5) {
@@ -29968,7 +29968,7 @@
           return this;
         }
       },
-      // Add parent method
+      // AddSlide parent method
       construct: {
         // Create text element
         text: function text(_text2) {
@@ -29985,7 +29985,7 @@
       create: 'tspan',
       // Inherit from
       inherit: SVG.Shape,
-      // Add class methods
+      // AddSlide class methods
       extend: {
         // Set text content
         text: function text(_text3) {
@@ -30059,7 +30059,7 @@
       inherit: SVG.Parent,
       // Define parent class
       parent: SVG.Text,
-      // Add parent method
+      // AddSlide parent method
       construct: {
         morphArray: SVG.PathArray,
         // return the array of the path track element
@@ -30102,7 +30102,7 @@
       },
       // Inherit from
       inherit: SVG.Container,
-      // Add parent method
+      // AddSlide parent method
       construct: {
         // Create nested svg document
         nested: function nested() {
@@ -30117,7 +30117,7 @@
       prefix: function prefix(t, a) {
         return a == 'color' ? t : t + '-' + a;
       }
-    } // Add sugar for fill and stroke
+    } // AddSlide sugar for fill and stroke
     ;
     ['fill', 'stroke'].forEach(function (m) {
       var extension = {};
@@ -30184,9 +30184,9 @@
         // Set initial state
         Array.isArray(members) ? this.members = members : this.clear();
       },
-      // Add class methods
+      // AddSlide class methods
       extend: {
-        // Add element to set
+        // AddSlide element to set
         add: function add() {
           var il,
               elements = [].slice.call(arguments);
@@ -30250,7 +30250,7 @@
           return this.members;
         }
       },
-      // Add parent method
+      // AddSlide parent method
       construct: {
         // Create a new set
         set: function set(members) {
@@ -30446,7 +30446,7 @@
       }
 
       return matrix;
-    } // Add centre point to transform object
+    } // AddSlide centre point to transform object
 
 
     function arrayToString(a) {
@@ -30495,7 +30495,7 @@
       }
 
       return SVG.adopt(node).id(SVG.eid(node.nodeName));
-    } // Add more bounding box properties
+    } // AddSlide more bounding box properties
 
 
     function fullBox(b) {
@@ -30528,10 +30528,10 @@
     } // Create matrix array for looping
 
 
-    var abcdef = 'abcdef'.split(''); // Add CustomEvent to IE9 and IE10	
+    var abcdef = 'abcdef'.split(''); // AddSlide CustomEvent to IE9 and IE10
 
     if (typeof window.CustomEvent !== 'function') {
-      // Code from: https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent	
+      // Code from: https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent
       var CustomEventPoly = function CustomEventPoly(event, options) {
         options = options || {
           bubbles: false,
@@ -31288,7 +31288,7 @@
       // we are at the end at both arrays. stop here
       if(++i == startArrTemp.length && i == destArrTemp.length) break
 
-      // destArray is longer. Add one element
+      // destArray is longer. AddSlide one element
       if(i == startArrTemp.length){
         startArrTemp.push([
           'C',
@@ -31301,7 +31301,7 @@
         ]);
       }
 
-      // startArr is longer. Add one element
+      // startArr is longer. AddSlide one element
       if(i == destArrTemp.length){
         destArrTemp.push([
           'C',
@@ -32336,7 +32336,7 @@
               rotation: this.el.transform().rotation  // The current rotation of the element
           };
 
-          // Add font-size parameter if the element type is text
+          // AddSlide font-size parameter if the element type is text
           if (this.el.type === "text") {
               this.parameters.fontSize = this.el.attr()["font-size"];
           }
@@ -32982,7 +32982,7 @@
             _this.events.fireEvent('beforeMount', [_this, _this.w]);
 
             window.addEventListener('resize', _this.windowResizeHandler);
-            addResizeListener(_this.el.parentNode, _this.parentResizeHandler); // Add CSS if not already added
+            addResizeListener(_this.el.parentNode, _this.parentResizeHandler); // AddSlide CSS if not already added
 
             if (!_this.css) {
               var rootNode = _this.el.getRootNode && _this.el.getRootNode();
@@ -33007,7 +33007,7 @@
                   // We are in Shadow DOM, add to shadow root
                   rootNode.prepend(_this.css);
                 } else {
-                  // Add to <head> of element's document
+                  // AddSlide to <head> of element's document
                   doc.head.appendChild(_this.css);
                 }
               }
