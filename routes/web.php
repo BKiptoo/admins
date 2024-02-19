@@ -11,6 +11,7 @@ use App\Livewire\User\Blog\Add;
 use App\Livewire\User\Blog\ListBlog;
 use App\Livewire\User\Pages\Members;
 use App\Livewire\User\Slide\AddSlide;
+use App\Livewire\User\Slide\SlideList;
 use App\Livewire\User\UserHome;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Auth\Admin\AdminLogin as AdminLogin;
@@ -49,6 +50,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/store', [Add::class, 'store'])->name('blog.store'); // Route for storing blog data
     Route::get('/listblog', ListBlog::class)->name('user.listblog');
     Route::get('/addslide',AddSlide::class)->name('user.slide.add');
+    Route::get('/slide_list',SlideList::class)->name('slide.slide-list');
     Route::prefix('account')->group(function () {
         Route::get('profile', UserProfile::class)->name('user.profile');
         // Route::get('credentials', UserPassword::class)->name('user.credentials');

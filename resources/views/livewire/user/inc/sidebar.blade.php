@@ -58,7 +58,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{route('slide.slide-list')}}">
                         <i class="bi bi-list"></i><span>List</span>
                     </a>
                 </li>
