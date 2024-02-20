@@ -7,9 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Blog extends Model
 {
-    use HasFactory;
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+    protected $fillable = [
+        'user_id', 'category_id', 'name', 'tags', 'description', 'photo'
+    ];
 
-    protected $fillable = ['category_id', 'name', 'description', 'tags', 'photo'];
-
-
+    // Define relationships if any
+    public static function create(array $array)
+    {
+    }
 }

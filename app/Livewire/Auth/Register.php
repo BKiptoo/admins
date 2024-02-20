@@ -11,7 +11,7 @@ class Register extends Component
     public $email;
     public $role;
     public $username;
-    public $phoneNumber; // Add the phoneNumber property
+    public $phoneNumber; // BlogAdd the phoneNumber property
     public $password;
     public $terms;
 

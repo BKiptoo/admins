@@ -7,7 +7,7 @@ use App\Livewire\Auth\Register;
 use App\Livewire\Auth\Reset;
 use App\Livewire\Auth\Verify;
 use App\Livewire\User\Account\UserProfile;
-use App\Livewire\User\Blog\Add;
+use App\Livewire\User\Blog\BlogAdd;
 use App\Livewire\User\Blog\ListBlog;
 use App\Livewire\User\Pages\Members;
 use App\Livewire\User\Slide\AddSlide;
@@ -46,10 +46,10 @@ Route::middleware(['guest'])->group(function () {
 Route::middleware(['auth'])->group(function () {
     Route::get('user.home', UserHome::class)->name('user.home');
     Route::get('/members', Members::class)->name('user.members');
-    Route::get('/add', Add::class)->name('user.add');
-    Route::post('/store', [Add::class, 'store'])->name('blog.store'); // Route for storing blog data
-    Route::get('/listblog', ListBlog::class)->name('user.listblog');
-    Route::get('/addslide',AddSlide::class)->name('user.slide.add');
+    Route::get('/add_blog', BlogAdd::class)->name('user.add_blog');
+    Route::post('/store', [BlogAdd::class, 'store'])->name('blog.store'); // Route for storing blog data
+    Route::get('/list blog', ListBlog::class)->name('user.list blog');
+    Route::get('/add slide',AddSlide::class)->name('user.slide.add');
     Route::get('/slide_list',SlideList::class)->name('slide.slide-list');
     Route::prefix('account')->group(function () {
         Route::get('profile', UserProfile::class)->name('user.profile');

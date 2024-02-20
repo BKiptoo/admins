@@ -25,7 +25,7 @@ class SlideList extends Component
 
     public function updatedSearch()
     {
-        // Add debouncing logic here if needed
+        // BlogAdd debouncing logic here if needed
         $this->loadData();
     }
 

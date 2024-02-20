@@ -25,7 +25,7 @@
                             <button wire:loading.class="disabled" wire:click="loadMore" wire:offline.attr="disabled" class="btn btn-outline-primary"><span wire:target="loadMore" wire:loading.class="spinner-border spinner-border-lg"></span><span class="fa fa-cloud-download-alt"></span> Load More</button>
                         </div>
                         <div class="col-md-2">
-                            <!-- Unused Column - Remove or Add Content Here -->
+                            <!-- Unused Column - Remove or BlogAdd Content Here -->
                         </div>
                     </div>
                     <div class="table-responsive">
@@ -55,8 +55,9 @@
                         </table>
                         @if($slides->isEmpty())
                             <div class="d-flex justify-content-center">
-                                <img src="https://shiftenant.co.ke/assets/images/no-items.gif" alt="No Items Found">
+                                <img src="{{asset('assets/img/no_item.jpg')}}" alt="No Items Found" style="max-width: 700px; max-height: 700px;">
                             </div>
+
                         @endif
                     </div>
                 </div>

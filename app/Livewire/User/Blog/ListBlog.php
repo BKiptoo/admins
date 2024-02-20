@@ -8,6 +8,18 @@ use App\Models\Blog;
 class ListBlog extends Component
 {
     public $blogs;
+    public $search;
+
+    public function loadData(): void
+    {
+        $query = Blog::query();
+
+        if ($this->search) {
+            $query->where('name', 'like', '%' . $this->search . '%');
+        }
+
+        $this->blogs = $query->orderBy('id', 'asc')->get();
+    }
 
     public function mount()
     {
